@@ -1,0 +1,33 @@
+const URL = 'http://localhost:3001/'
+
+export const createUser = (userData) => {
+    return (dispatch) => {
+        const strongParams = {
+            user: {
+                username: userData.username, 
+                email: userData.email, 
+                password: userData.password, 
+                password_confirmation: userData.password_confirmation
+            }
+        }
+        fetch(URL + 'users', {
+            method: 'POST', 
+            headers: {
+                "Accept": "application/json", 
+                "Content-Type": "application/json"
+            }, 
+            body: JSON.stringify(strongParams)
+        })
+        .then(response => response.json())
+        .then(user => {
+            if(user.errors)
+                return dispatch({type: "CREATE_USER_ERROR", errors: user.errors})
+                else
+                return dispatch({type: "CREATE_USER", user})
+        })
+        .catch((errors) => {
+            console.log(errors)
+            dispatch({type: "CREATE_USER_ERROR", errors})
+        })
+    }
+}
