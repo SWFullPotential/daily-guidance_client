@@ -1,40 +1,34 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { createUser } from '../../actions/userActions'
 
-class Signup extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
+
+export class Signup extends Component {
+   state = {
             username: '', 
             email: '', 
             password: '', 
-            password_confirmation: '', 
-            erros: ''
-        };
-    }
-
+            password_confirmation: ''
+    };
+    
+    handleSubmit = event => {
+        event.preventDefault()
+        this.state({
+            username: '', 
+            email: '', 
+            password: '', 
+            password_confirmation: ''
+        })
+        this.props.createUser(this.state)
+        this.props.history.push('/')
+    };
+    
     handleChange = (event) => {
         const {name, value} = event.target 
         this.setState({
             [name]: value
         })
     };
-
-    handleSubmit = (event) => {
-        event.preventDefault()
-        const {username, email, password} = this.state 
-        let user = {
-            username: username, 
-            email: email, 
-            password: password
-        }
-        fetch('http;//localhost:3001/login', {user}, {withCredentials: true})
-        .then(response => {
-            if (response.data.logged_in) {
-                this.props.handleLogin(response.data)
-            }
-        })
-    };
-
     render() {
         const {username, email, password, password_confirmation} = this.state
         return (
@@ -76,5 +70,11 @@ class Signup extends Component {
     }
 }
 
-export default Signup;
+const mapDispatchToProps = dispatch => {
+    return {
+        createUser: (userData) => dispatch(createUser(userData))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Signup);
 

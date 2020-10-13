@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import Home from './Home'
-import Login from './Login'
-import Signup from './Signup'
+import Login from './components/authent/Login'
+import Signup from './components/authent/Signup'
 
 class App extends Component {
   constructor(props) {
