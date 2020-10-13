@@ -1,7 +1,7 @@
 const URL = 'http://localhost:3001/'
 
 export const createUser = (userData) => {
-    return (dispatch) => {
+    return dispatch => {
         const strongParams = {
             user: {
                 username: userData.username, 
@@ -28,6 +28,16 @@ export const createUser = (userData) => {
         .catch((errors) => {
             console.log(errors)
             dispatch({type: "CREATE_USER_ERROR", errors})
+        })
+    }
+}
+
+export const destroySession = () => {
+    return dispatch => {
+        fetch(URL + 'logout')
+        .then(response => response.json())
+        .then(logoutData => {
+            dispatch({type: "DESTROY_SESSION", logoutData})
         })
     }
 }
