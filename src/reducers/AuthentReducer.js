@@ -12,7 +12,7 @@ const authentReducer = (state = initialState, action) => {
                 logged_in: true, 
                 user: action.user
             }
-        case 'LOGOUT_USER': 
+        case 'DESTROY_SESSION': 
             return {
                 ...state, 
                 logged_in: false, 
