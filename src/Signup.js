@@ -24,7 +24,8 @@ class Signup extends Component {
     };
 
     render() {
-        const {username, email, passwork, password_confirmation} = this.statereturn (
+        const {username, email, password, password_confirmation} = this.state
+        return (
             <div>
                 <h1>Sign Up</h1>
                 <form onSubmit={this.handleSubmit()}>
