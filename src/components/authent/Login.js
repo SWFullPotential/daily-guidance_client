@@ -1,28 +1,32 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { createStore } from 'redux';
+import { createSession } from '../../actions/userActions'
 
-class Login extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
+export class Login extends Component {
+   state = {
             username: '',
             email: '',
             password: '', 
-            errors: ''
-        };
     }
-    handleChange = (event) => {
-        const {name, value} = event.target 
-        this.setState({
-            [name]: value
-        })
-    };
     handleSubmit = (event) => {
         event.preventDefault()
-    };
+        this.setState({
+            username: '', 
+            email: '', 
+            password: ''
+        })
+        this.props.createSession(this.state)
+        this.props.history.push('/')
+    }
 
-    render() {
-        const {username, email, password} = this.state
+    handleChange = (event) => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+
+    render(){
         return (
             <div>
                 <h1>Log In</h1>
@@ -49,4 +53,10 @@ class Login extends Component {
     }
 }
 
-export default Login;
+const mapDispatchToProps = dispatch => {
+    return {
+        createSession: userData => dispatch(createStore(userData))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Login);
