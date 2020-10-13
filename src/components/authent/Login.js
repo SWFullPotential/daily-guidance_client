@@ -22,7 +22,7 @@ export class Login extends Component {
 
     handleChange = (event) => {
         this.setState({
-            [e.target.name]: e.target.value
+            [event.target.name]: event.target.value
         })
     }
 
@@ -35,18 +35,15 @@ export class Login extends Component {
                     placeholder="username"
                     type="text"
                     name="username"
-                    value={username}
+                    value={this.state.username}
                     onChange={this.handleChange}/>
                     <input
                     placeholder="password"
                     type="password"
                     name="passowrd"
-                    value={password}
+                    value={this.state.password}
                     onChange={this.handleChange}/>
                     <button placeholder="Submit" type="submit">Log In</button>
-                    <div>
-                        or <Link to='/signup'>Sign Up</Link>
-                    </div>
                 </form>
             </div>
         );
