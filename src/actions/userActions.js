@@ -44,7 +44,7 @@ export const destroySession = () => {
 
 export const createSession = userData => {
     return dispatch => {
-        const strontParams = {
+        const strongParams = {
             user: {
                 username: userData.username, 
                 password: userData.password
@@ -63,7 +63,7 @@ export const createSession = userData => {
             if(user.errors)
                 return dispatch({type: "CREATE_USER_ERROR", errors: user.errors})
             else 
-                return didspatch({type: "CREATE_SESSION", user})
+                return dispatch({type: "CREATE_SESSION", user})
         }) 
         .catch((errors) => {
             console.log(errors)
