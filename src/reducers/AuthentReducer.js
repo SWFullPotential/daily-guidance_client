@@ -38,3 +38,5 @@ const authentReducer = (state = initialState, action) => {
             return state
     }
 }
+
+export default authentReducer;
