@@ -21,6 +21,18 @@ class Signup extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
+        const {username, email, password} = this.state 
+        let user = {
+            username: username, 
+            email: email, 
+            password: password
+        }
+        fetch('http;//localhost:3001/login', {user}, {withCredentials: true})
+        .then(response => {
+            if (response.data.logged_in) {
+                this.props.handleLogin(response.data)
+            }
+        })
     };
 
     render() {
