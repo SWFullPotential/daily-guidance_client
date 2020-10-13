@@ -38,7 +38,7 @@ export class Signup extends Component {
                     type="text" 
                     name="username"
                     value={this.state.username}
-                    onchange={this.handleChange} 
+                    onChange={this.handleChange} 
                     />
                     <br></br>
                     <input 
@@ -46,7 +46,7 @@ export class Signup extends Component {
                     type="text" 
                     name="email"
                     value={this.state.email}
-                    onchange={this.handleChange} 
+                    onChange={this.handleChange} 
                     />
                     <br></br>
                     <input 
@@ -54,7 +54,7 @@ export class Signup extends Component {
                     type="password" 
                     name="password"
                     value={this.state.password}
-                    onchange={this.handleChange} 
+                    onChange={this.handleChange} 
                     />
                     <br></br>
                     <input 
@@ -62,7 +62,7 @@ export class Signup extends Component {
                     type="password" 
                     name="password_confirmation"
                     value={this.state.password_confirmation}
-                    onchange={this.handleChange} 
+                    onChange={this.handleChange} 
                     />
                     <br></br>
                     <button placeholder="submit" type="submit">Sign Up</button>
