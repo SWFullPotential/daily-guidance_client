@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { createStore } from 'redux';
 import { createSession } from '../../actions/userActions'
 
 export class Login extends Component {
@@ -40,7 +39,7 @@ export class Login extends Component {
                     <input
                     placeholder="password"
                     type="password"
-                    name="passowrd"
+                    name="password"
                     value={this.state.password}
                     onChange={this.handleChange}/>
                     <button placeholder="Submit" type="submit">Log In</button>
@@ -52,7 +51,7 @@ export class Login extends Component {
 
 const mapDispatchToProps = dispatch => {
     return {
-        createSession: userData => dispatch(createStore(userData))
+        createSession: userData => dispatch(createSession(userData))
     }
 }
 
