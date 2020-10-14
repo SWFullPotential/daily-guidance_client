@@ -1,4 +1,5 @@
 import AuthentReducer from './AuthentReducer';
+import CardsReducer from './CardsReducer';
 import { combineReducers } from 'redux';
 
 
