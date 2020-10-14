@@ -1,20 +1,20 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Home from "./components/layouts/Home";
+import NavBar from "./components/layouts/NavBar";
 import Login from "./components/auth/Login";
 import Signup from "./components/auth/Signup";
 
 function App() {
   return (
-    <div>
-      <BrowserRouter>
+    <BrowserRouter>
+      <div>
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={NavBar} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
         </Switch>
-      </BrowserRouter>
-    </div>
+      </div>
+    </BrowserRouter>
   );
 }
 export default App;
