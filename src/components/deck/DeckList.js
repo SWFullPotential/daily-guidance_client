@@ -1,14 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 import { connect } from "react-redux";
 
 const DeckList = ({ cards }) => {
   return (
     <div>
-      {cards.map((card) => (
-        <ul>
+      <ul>
+        {cards.map((card) => (
           <li key={card.id}>{card.name}</li>
-        </ul>
-      ))}
+        ))}
+      </ul>
     </div>
   );
 };
