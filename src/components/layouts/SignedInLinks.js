@@ -11,6 +11,7 @@ export class SignedInLinks extends Component {
     return (
       <nav>
         <NavLink to="/">Home</NavLink>
+        <NavLink to="/cards">All Cards</NavLink>
         <NavLink to="/" onClick={this.logout}>
           Logout
         </NavLink>

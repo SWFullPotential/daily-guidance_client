@@ -4,7 +4,7 @@ import { combineReducers } from "redux";
 
 const rootReducer = combineReducers({
   auth: authentReducer,
-  cardsRed: cardsReducer,
+  cards: cardsReducer,
 });
 
 export default rootReducer;
