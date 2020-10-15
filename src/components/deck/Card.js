@@ -1,29 +1,34 @@
 import React from "react";
 import { connect } from "react-redux";
 
-const Card = (id) => {
-  let card = Card.findByProps(id);
-  return (
-    <div>
-      {card.name}
-      <br />
-      {card.name_short}
-      <br />
-      {card.value}
-      <br />
-      {card.meaning_up}
-      <br />
-      {card.meaning_rev}
-      <br />
-      {card.card_type}
-      <br />
-    </div>
-  );
+const Card = ({ card }) => {
+  if (card) {
+    return (
+      <div>
+        {card.name}
+        <br />
+        {card.name_short}
+        <br />
+        {card.value}
+        <br />
+        {card.meaning_up}
+        <br />
+        {card.meaning_rev}
+        <br />
+        {card.card_type}
+        <br />
+      </div>
+    );
+  } else {
+    return <div>Loading...</div>;
+  }
 };
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, props) => {
   return {
-    card: state.card,
+    card: state.cards.find(
+      (card) => props.match.params.id === card.id.toString()
+    ),
   };
 };
 

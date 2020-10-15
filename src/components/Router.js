@@ -13,8 +13,8 @@ const Router = () => {
       <Route exact path="/" component={Home} />
       <Route exact path="/login" component={Login} />
       <Route exact path="/signup" component={Signup} />
-      <Route path="/cards" component={DeckContainer} />
-      <Route path={`/cards/:id`} component={Card} />
+      <Route exact path="/cards" component={DeckContainer} />
+      <Route exact path={`/cards/:id`} component={Card} />
     </Switch>
   );
 };
