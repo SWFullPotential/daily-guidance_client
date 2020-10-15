@@ -1,10 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
+import NavBar from "../layouts/NavBar";
 
 const Card = ({ card }) => {
   if (card) {
     return (
       <div>
+        <NavBar />
         {card.name}
         <br />
         {card.name_short}

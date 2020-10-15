@@ -16,7 +16,7 @@ export class Login extends Component {
       password: "",
     });
     this.props.createSession(this.state);
-    this.props.history.push("/");
+    this.props.history.push("/welcome");
   };
 
   handleChange = (event) => {

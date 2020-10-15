@@ -5,7 +5,8 @@ const Home = () => {
   return (
     <div>
       <NavBar />
-      <h1>Welcome</h1>
+      <h1>Home</h1>
+      <p>Please log in for your daily draw.</p>
     </div>
   );
 };

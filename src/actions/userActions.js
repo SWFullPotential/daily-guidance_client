@@ -72,3 +72,14 @@ export const createSession = (userData) => {
       });
   };
 };
+
+export const checkSession = () => {
+  return (dispatch) => {
+    fetch(URL + "logged_in", { credentials: "same-origin" })
+      .then((resp) => resp.json())
+      .then((logged_in) => {
+        console.log(logged_in);
+        dispatch({ type: "CHECK_SESSION", logged_in });
+      });
+  };
+};

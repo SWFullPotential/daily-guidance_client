@@ -1,22 +1,36 @@
-import React from "react";
+import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
-
+import { checkSession } from "../actions/userActions";
+import { connect } from "react-redux";
 import Home from "./layouts/Home";
 import Login from "./auth/Login";
 import Signup from "./auth/Signup";
 import Card from "./deck/Card";
 import DeckContainer from "./deck/DeckContainer";
+import DrawContainer from "./daily_draw/DrawContainer";
+import Welcome from "./layouts/Welcome";
+import CardDraw from "./daily_draw/CardDraw";
 
-const Router = () => {
-  return (
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/login" component={Login} />
-      <Route exact path="/signup" component={Signup} />
-      <Route exact path="/cards" component={DeckContainer} />
-      <Route exact path={`/cards/:id`} component={Card} />
-    </Switch>
-  );
-};
+class Router extends Component {
+  componentDidMount() {
+    this.props.checkSession();
+  }
+  render() {
+    return (
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/signup" component={Signup} />
 
-export default Router;
+        <Route exact path="/welcome" component={Welcome} />
+        <Route exact path="/cards" component={DeckContainer} />
+        <Route exact path={`/cards/:id`} component={Card} />
+
+        <Route exact path="/daily_draw" component={DrawContainer} />
+        <Route exact path="/card_draw" component={CardDraw} />
+      </Switch>
+    );
+  }
+}
+
+export default connect(null, { checkSession })(Router);

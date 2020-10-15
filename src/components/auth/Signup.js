@@ -19,7 +19,7 @@ export class Signup extends Component {
       password: "",
       password_confirmation: "",
     });
-    this.props.history.push("/");
+    this.props.history.push("/welcome");
   };
 
   handleChange = (e) => {

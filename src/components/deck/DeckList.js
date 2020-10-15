@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const DeckList = ({ cards }) => {
   return (
@@ -8,9 +8,9 @@ const DeckList = ({ cards }) => {
       <ul>
         {cards.map((card) => (
           <li key={card.id}>
-            <Link key={card.id} to={`/cards/${card.id}`}>
+            <NavLink key={card.id} to={`/cards/${card.id}`}>
               {card.name}
-            </Link>
+            </NavLink>
           </li>
         ))}
       </ul>
