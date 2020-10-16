@@ -5,10 +5,12 @@ import SignedOutLinks from "./SignedOutLinks";
 
 export class NavBar extends Component {
   render() {
-    let links;
-    this.props.state.auth.logged_in
-      ? (links = <SignedInLinks />)
-      : (links = <SignedOutLinks />);
+    let links = this.props.state.auth.logged_in ? (
+      <SignedInLinks />
+    ) : (
+      <SignedOutLinks />
+    );
+    console.log(this.props.state.auth);
     return (
       <nav>
         <div>{links}</div>
