@@ -7,16 +7,22 @@ const Card = ({ card }) => {
     return (
       <div>
         <NavBar />
+        <h4>Name:</h4>
         {card.name}
         <br />
+        <h4>Name Short:</h4>
         {card.name_short}
         <br />
+        <h4>Card Value:</h4>
         {card.value}
         <br />
+        <h4>Meaning Up:</h4>
         {card.meaning_up}
         <br />
+        <h4>Meaning Reversed:</h4>
         {card.meaning_rev}
         <br />
+        <h4>Card Type::</h4>
         {card.card_type}
         <br />
       </div>
