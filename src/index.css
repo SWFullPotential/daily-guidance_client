@@ -1,4 +1,4 @@
-body {
+html {
   margin: 10;
   background-image: url("./milky-way-2695569_1920.jpg");
   background-color: "#221266";
@@ -15,7 +15,7 @@ div {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   color: aliceblue;
-  background-color: rgba(59, 1, 248, 0.2);
+  background-color: rgba(59, 1, 248, 0.3);
   border: 2px groove black;
   padding: 10px;
   margin: 5%;
