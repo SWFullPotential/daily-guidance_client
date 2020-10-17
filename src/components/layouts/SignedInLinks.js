@@ -10,9 +10,11 @@ export class SignedInLinks extends Component {
   render() {
     return (
       <nav>
-        <NavLink to="/welcome">Home</NavLink>
+        <NavLink className="nlink" to="/welcome">
+          Home
+        </NavLink>
 
-        <NavLink to="/" onClick={this.logout}>
+        <NavLink className="nlink" to="/" onClick={this.logout}>
           Logout
         </NavLink>
       </nav>

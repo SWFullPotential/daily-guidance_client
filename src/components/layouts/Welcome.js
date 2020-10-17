@@ -6,12 +6,16 @@ import NavBar from "../layouts/NavBar";
 export class Welcome extends Component {
   render() {
     return (
-      <div>
-        <NavBar />
+      <div className="welcome">
         <h1>Welcome</h1>
-        <NavLink to="/daily_draw">Daily Reading</NavLink>
+        <NavLink className="link" to="/daily_draw">
+          Daily Reading
+        </NavLink>
         <br />
-        <NavLink to="/cards">All Cards</NavLink>
+        <br />
+        <NavLink className="link" to="/cards">
+          All Cards
+        </NavLink>
       </div>
     );
   }
