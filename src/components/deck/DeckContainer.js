@@ -11,13 +11,10 @@ class DeckContainer extends Component {
   }
   render() {
     return (
-      <Box color="white" bgcolor="#221266" p={1}>
-        <div>
-          <NavBar />
-          <h1>Tarot Cards</h1>
-          <DeckList />
-        </div>
-      </Box>
+      <div>
+        <h1>Tarot Cards</h1>
+        <DeckList className="card" />
+      </div>
     );
   }
 }

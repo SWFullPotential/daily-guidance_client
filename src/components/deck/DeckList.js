@@ -8,9 +8,11 @@ const DeckList = ({ cards }) => {
       <ul>
         {cards.map((card) => (
           <li key={card.id}>
-            <NavLink key={card.id} to={`/cards/${card.id}`}>
+            <NavLink className="link" key={card.id} to={`/cards/${card.id}`}>
               {card.name}
             </NavLink>
+            <br />
+            <br />
           </li>
         ))}
       </ul>
