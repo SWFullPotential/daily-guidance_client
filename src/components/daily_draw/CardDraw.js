@@ -7,13 +7,13 @@ const RandCard = (props) => {
     const display = up ? (
       <>
         <h4>Your card has been drawn up, which means:</h4>
-        {props.card.meaning_up}
+        <p>{props.card.meaning_up}</p>
         <br />
       </>
     ) : (
       <>
         <h4>Your card has been drawn reversed, which means:</h4>
-        {props.card.meaning_rev}
+        <p>{props.card.meaning_rev}</p>
         <br />
       </>
     );
@@ -22,13 +22,13 @@ const RandCard = (props) => {
       <div>
         <h1>Your Daily Guidance</h1>
         <h4>Card Name:</h4>
-        {props.card.name}
+        <p>{props.card.name}</p>
         <br />
         <h4>Card Type: </h4>
-        {props.card.card_type}
+        <p>{props.card.card_type}</p>
         <br />
         <h4>Card Value:</h4>
-        {props.card.value}
+        <p>{props.card.value}</p>
         <br />
         {display}
       </div>
