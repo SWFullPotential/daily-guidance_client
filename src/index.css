@@ -2,9 +2,7 @@ body {
   margin: 10;
   background-image: url("./milky-way-2695569_1920.jpg");
   background-color: "#221266";
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -14,6 +12,8 @@ code {
     monospace;
 }
 div {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
   color: aliceblue;
   background-color: rgba(59, 1, 248, 0.2);
   border: 2px groove black;

@@ -24,10 +24,8 @@ const Card = ({ card }) => {
         <br />
         <h3>Meaning Reversed:</h3>
         <p>{card.meaning_rev}</p>
-        <br />
-        <h3>Card Type::</h3>
+        <h3>Card Type:</h3>
         <p>{card.card_type}</p>
-        <br />
       </div>
     );
   } else {
