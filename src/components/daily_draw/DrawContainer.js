@@ -24,11 +24,12 @@ class DrawContainer extends Component {
   render() {
     return (
       <div>
-        <NavBar />
         <h1>Daily Reading</h1>
         <p>Take a deep breathe, center your mind and draw your card.</p>
 
-        <button onClick={this.drawCard}>Draw Card</button>
+        <button className="button" onClick={this.drawCard}>
+          Draw Card
+        </button>
         <RandCard card={this.state.card} />
       </div>
     );

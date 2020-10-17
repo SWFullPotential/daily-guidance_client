@@ -7,6 +7,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import { BrowserRouter as Router } from "react-router-dom";
 
 import App from "./components/App";
+import NavBar from "./components/layouts/NavBar";
 import rootReducer from "./reducers/rootReducer";
 import "./index.css";
 
@@ -19,6 +20,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <Router>
+        <NavBar />
         <App />
       </Router>
     </Provider>

@@ -6,27 +6,26 @@ import { NavLink } from "react-router-dom";
 const Card = ({ card }) => {
   if (card) {
     return (
-      <div>
-        <NavBar />
-        <NavLink to="/cards">All Cards</NavLink>
-        <h4>Name:</h4>
-        {card.name}
+      <div className="card">
+        <NavLink className="link" to="/cards">
+          All Cards
+        </NavLink>
+        <h3>Name:</h3>
+        <p>{card.name}</p>
         <br />
-        <h4>Name Short:</h4>
-        {card.name_short}
+        <h3>Name Short:</h3>
+        <p>{card.name_short}</p>
         <br />
-        <h4>Card Value:</h4>
-        {card.value}
+        <h3>Card Value:</h3>
+        <p>{card.value}</p>
         <br />
-        <h4>Meaning Up:</h4>
-        {card.meaning_up}
+        <h3>Meaning Up:</h3>
+        <p>{card.meaning_up}</p>
         <br />
-        <h4>Meaning Reversed:</h4>
-        {card.meaning_rev}
-        <br />
-        <h4>Card Type::</h4>
-        {card.card_type}
-        <br />
+        <h3>Meaning Reversed:</h3>
+        <p>{card.meaning_rev}</p>
+        <h3>Card Type:</h3>
+        <p>{card.card_type}</p>
       </div>
     );
   } else {
