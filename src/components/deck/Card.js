@@ -1,12 +1,14 @@
 import React from "react";
 import { connect } from "react-redux";
 import NavBar from "../layouts/NavBar";
+import { NavLink } from "react-router-dom";
 
 const Card = ({ card }) => {
   if (card) {
     return (
       <div>
         <NavBar />
+        <NavLink to="/cards">All Cards</NavLink>
         <h4>Name:</h4>
         {card.name}
         <br />
