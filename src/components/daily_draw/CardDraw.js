@@ -2,19 +2,23 @@ import React from "react";
 
 const RandCard = (props) => {
   if (props.card) {
+    let image = "/deckImages/" + props.card.name_short + ".png";
     const randDirection = Math.floor(Math.random() * 100);
     const up = randDirection > 50 ? true : false;
     const display = up ? (
       <>
         <h4>Your card has been drawn up, which means:</h4>
         <p>{props.card.meaning_up}</p>
+        <img src={image} />
+
         <br />
       </>
     ) : (
       <>
         <h4>Your card has been drawn reversed, which means:</h4>
         <p>{props.card.meaning_rev}</p>
-        <img src="./deckImages/ar00.png" alt="{props.card.short_name}" />
+        <img src={image} className="rotate-image" />
+
         <br />
       </>
     );

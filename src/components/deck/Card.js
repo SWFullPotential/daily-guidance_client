@@ -1,10 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
-import NavBar from "../layouts/NavBar";
 import { NavLink } from "react-router-dom";
 
 const Card = ({ card }) => {
   if (card) {
+    // debugger;
+    let image = "/deckImages/" + card.name_short + ".png";
     return (
       <div className="card">
         <NavLink className="link" to="/cards">
@@ -26,6 +27,8 @@ const Card = ({ card }) => {
         <p>{card.meaning_rev}</p>
         <h3>Card Type:</h3>
         <p>{card.card_type}</p>
+
+        <img src={image} />
       </div>
     );
   } else {
