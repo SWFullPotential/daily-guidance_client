@@ -1,5 +1,6 @@
-##Daily_Guidance_API
-link to backend: [link](https://github.com/SWFullPotential/daily_guidance_api)
+## Daily_Guidance_API link to backend
+
+[link](https://github.com/SWFullPotential/daily_guidance_api)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
