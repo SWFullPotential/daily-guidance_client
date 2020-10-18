@@ -3,10 +3,10 @@ import NavBar from "./NavBar";
 
 const Home = () => {
   return (
-    <div className="home">
+    <div className="text-center">
       <div>
-        <h1>Home</h1>
-        <p>Please log in for your daily draw.</p>
+        <h1>Daily Guidance</h1>
+        <p>Please log in for your daily tarot reading.</p>
       </div>
     </div>
   );

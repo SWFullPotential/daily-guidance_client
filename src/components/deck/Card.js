@@ -7,7 +7,7 @@ const Card = ({ card }) => {
     // debugger;
     let image = "/deckImages/" + card.name_short + ".png";
     return (
-      <div className="card">
+      <div className="text_center" id="card-img">
         <NavLink className="link" to="/cards">
           All Cards
         </NavLink>
@@ -28,7 +28,7 @@ const Card = ({ card }) => {
         <h3>Card Type:</h3>
         <p>{card.card_type}</p>
 
-        <img src={image} />
+        <img src={image} className="image" />
       </div>
     );
   } else {

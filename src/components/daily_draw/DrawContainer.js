@@ -23,7 +23,7 @@ class DrawContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div className="text_center">
         <h1>Daily Reading</h1>
         <p>Take a deep breathe, center your mind and draw your card.</p>
 

@@ -21,9 +21,31 @@ div {
   padding: 10px;
   margin: 5%;
   align-items: center;
+  clear: right;
+}
+
+p {
+  margin: 0, 0, 0, 25px;
+  font-weight: lighter;
+}
+
+img {
+  width: 150px;
+  height: auto;
+  position: absolute;
+  top: 575px;
+  right: 400px;
+}
+.image {
+  /* float: right; */
+  width: 150px;
+  height: auto;
+  position: absolute;
+  top: 300px;
+  right: 200px;
 }
 .nav {
-  padding: 0;
+  text-align: right;
 }
 
 .button {
@@ -32,12 +54,7 @@ div {
   font-weight: bolder;
 }
 
-p {
-  margin: 0, 0, 0, 25px;
-  font-weight: lighter;
-}
 .nlink {
-  position: right;
   color: aliceblue;
   margin: 1%;
 }
@@ -48,4 +65,12 @@ p {
 
 .rotate-image {
   transform: rotate(180deg);
+}
+
+.text_center {
+  text-align: center;
+}
+
+.list {
+  text-align: left;
 }

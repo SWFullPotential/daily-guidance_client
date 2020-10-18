@@ -11,7 +11,7 @@ class DeckContainer extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="text_center">
         <h1>Tarot Cards</h1>
         <DeckList className="card" />
       </div>

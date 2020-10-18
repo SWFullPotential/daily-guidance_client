@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const DeckList = ({ cards }) => {
   return (
-    <div>
+    <div className="list">
       <ul>
         {cards.map((card) => (
           <li key={card.id}>

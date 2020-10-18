@@ -28,7 +28,7 @@ export class Login extends Component {
 
   render() {
     return (
-      <div>
+      <div className="text_center">
         <h1>Log In</h1>
         <form onSubmit={this.handleSubmit}>
           <input
@@ -45,6 +45,7 @@ export class Login extends Component {
             value={this.state.password}
             onChange={this.handleChange}
           />
+          <br />
           <button placeholder="Submit" type="submit">
             Log In
           </button>
