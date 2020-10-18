@@ -37,7 +37,7 @@ export class Signup extends Component {
   //   };
   render() {
     return (
-      <div>
+      <div className="text_center">
         <h1>Sign Up</h1>
         <form onSubmit={this.handleSubmit}>
           <input
