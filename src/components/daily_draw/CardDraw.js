@@ -14,6 +14,7 @@ const RandCard = (props) => {
       <>
         <h4>Your card has been drawn reversed, which means:</h4>
         <p>{props.card.meaning_rev}</p>
+        <img src="./deckImages/ar00.png" alt="{props.card.short_name}" />
         <br />
       </>
     );
