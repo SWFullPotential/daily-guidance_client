@@ -3,7 +3,7 @@ import NavBar from "./NavBar";
 
 const Home = () => {
   return (
-    <div className="text-center">
+    <div className="text_center">
       <div>
         <h1>Daily Guidance</h1>
         <p>Please log in for your daily tarot reading.</p>
