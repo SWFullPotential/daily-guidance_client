@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { NavLink } from "react-router-dom";
 import { fetchCards } from "../../actions/cardActions";
-import NavBar from "../layouts/NavBar";
-import RandCard from "./CardDraw";
+import RandCard from "./RandCard";
 
 class DrawContainer extends Component {
   state = {

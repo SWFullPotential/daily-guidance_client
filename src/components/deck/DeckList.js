@@ -7,7 +7,7 @@ const DeckList = ({ cards }) => {
     <div className="list">
       <ul>
         {cards.map((card) => (
-          <li key={card.id}>
+          <li>
             <NavLink className="link" key={card.id} to={`/cards/${card.id}`}>
               {card.name}
             </NavLink>
