@@ -4,7 +4,6 @@ import { NavLink } from "react-router-dom";
 
 const Card = ({ card }) => {
   if (card) {
-    // debugger;
     let image = "/deckImages/" + card.name_short + ".png";
     return (
       <div className="text_center" id="card-img">
@@ -28,7 +27,7 @@ const Card = ({ card }) => {
         <h3>Card Type:</h3>
         <p>{card.card_type}</p>
 
-        <img src={image} className="image" />
+        <img src={image} alt={card.name} className="image" />
       </div>
     );
   } else {
