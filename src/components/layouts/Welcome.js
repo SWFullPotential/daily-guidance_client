@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
-import NavBar from "../layouts/NavBar";
 
 export class Welcome extends Component {
   render() {

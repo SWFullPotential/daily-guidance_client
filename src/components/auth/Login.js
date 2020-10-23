@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { createSession } from "../../actions/userActions";
-import NavBar from "../layouts/NavBar";
 
 export class Login extends Component {
   state = {
