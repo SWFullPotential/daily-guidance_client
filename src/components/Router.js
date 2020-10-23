@@ -23,6 +23,7 @@ class Router extends Component {
         <Route exact path="/signup" component={Signup} />
 
         <Route exact path="/welcome" component={Welcome} />
+
         <Route exact path="/cards" component={DeckContainer} />
         <Route exact path={`/cards/:id`} component={Card} />
 
