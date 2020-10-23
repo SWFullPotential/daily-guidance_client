@@ -9,14 +9,14 @@ const RandCard = (props) => {
       <>
         <h4>Your card has been drawn up, which means:</h4>
         <p>{props.card.meaning_up}</p>
-        <img src={image} />
+        <img src={image} alt={props.card.name} />
         <br />
       </>
     ) : (
       <>
         <h4>Your card has been drawn reversed, which means:</h4>
         <p>{props.card.meaning_rev}</p>
-        <img src={image} className="rotate-image" />
+        <img src={image} alt={props.card.name} className="rotate-image" />
         <br />
       </>
     );
