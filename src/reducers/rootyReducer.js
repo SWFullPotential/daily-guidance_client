@@ -1,9 +1,9 @@
-import authentReducer from "./authentReducer";
+import authReducer from "./authReducer";
 import cardsReducer from "./cardsReducer";
 import { combineReducers } from "redux";
 
 const rootReducer = combineReducers({
-  auth: authentReducer,
+  auth: authReducer,
   cards: cardsReducer,
 });
 
