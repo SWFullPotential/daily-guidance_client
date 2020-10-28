@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
+import Liker from "./Liker";
 
 const DeckList = ({ cards }) => {
   return (
@@ -11,6 +12,7 @@ const DeckList = ({ cards }) => {
             <NavLink className="link" key={card.id} to={`/cards/${card.id}`}>
               {card.name}
             </NavLink>
+            {/* <Liker /> */}
             <br />
             <br />
           </li>
