@@ -13,10 +13,10 @@ export class Liker extends Component {
 
   render() {
     return (
-      <div>
+      <>
         <button onClick={this.handleLike}>Like</button>
         <p>{this.state.likes}</p>
-      </div>
+      </>
     );
   }
 }
