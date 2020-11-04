@@ -1,4 +1,5 @@
-const URL = "http://localhost:3001/";
+// const URL = "http://localhost:3001/";
+const URL = "https://daily-guidance.herokuapp.com/";
 
 export const createUser = (userData) => {
   return (dispatch) => {
