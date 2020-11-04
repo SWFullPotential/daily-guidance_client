@@ -33,7 +33,7 @@ class DeckList extends Component {
         />
         <ul>
           {filteredCards.map((card) => (
-            <li>
+            <li key={card.id}>
               <NavLink className="link" key={card.id} to={`/cards/${card.id}`}>
                 {card.name}
               </NavLink>
