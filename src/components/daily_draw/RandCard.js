@@ -22,7 +22,7 @@ const RandCard = (props) => {
     );
 
     return (
-      <div>
+      <>
         <h1>Your Daily Guidance</h1>
         <h4>Card Name:</h4>
         <p>{props.card.name}</p>
@@ -34,10 +34,15 @@ const RandCard = (props) => {
         <p>{props.card.value}</p>
         <br />
         {display}
-      </div>
+      </>
     );
   } else {
-    return <div>Please Draw A Card.</div>;
+    return (
+      <>
+        <br />
+        <p>Please Draw A Card.</p>
+      </>
+    );
   }
 };
 

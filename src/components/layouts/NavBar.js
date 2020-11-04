@@ -13,7 +13,7 @@ export class NavBar extends Component {
     console.log(this.props.state.auth);
     return (
       <nav className="nav">
-        <div>{links}</div>
+        <>{links}</>
       </nav>
     );
   }
