@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchCards } from "../../actions/cardActions";
 import RandCard from "./RandCard";
 
-class DrawContainer extends Component {
+class DailyDrawContainer extends Component {
   state = {
     card: null,
   };
@@ -39,4 +39,4 @@ const mapStateToProps = (state) => {
     cards: state.cards,
   };
 };
-export default connect(mapStateToProps, { fetchCards })(DrawContainer);
+export default connect(mapStateToProps, { fetchCards })(DailyDrawContainer);
