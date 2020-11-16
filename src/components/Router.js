@@ -7,9 +7,8 @@ import Login from "./auth/Login";
 import Signup from "./auth/Signup";
 import Card from "./deck/Card";
 import DeckContainer from "./deck/DeckContainer";
-import DrawContainer from "./daily_draw/DrawContainer";
+import DailyDrawContainer from "./daily_draw/DailyDrawContainer";
 import Welcome from "./layouts/Welcome";
-import RandCard from "./daily_draw/RandCard";
 
 class Router extends Component {
   componentDidMount() {
@@ -27,7 +26,7 @@ class Router extends Component {
         <Route exact path="/cards" component={DeckContainer} />
         <Route exact path={`/cards/:id`} component={Card} />
 
-        <Route exact path="/daily_draw" component={DrawContainer} />
+        <Route exact path="/daily_draw" component={DailyDrawContainer} />
       </Switch>
     );
   }
