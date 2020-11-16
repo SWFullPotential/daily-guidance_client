@@ -28,7 +28,6 @@ class Router extends Component {
         <Route exact path={`/cards/:id`} component={Card} />
 
         <Route exact path="/daily_draw" component={DrawContainer} />
-        <Route exact path="/card_draw" component={RandCard} />
       </Switch>
     );
   }
