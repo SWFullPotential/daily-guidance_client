@@ -15,6 +15,7 @@ class DailyDrawContainer extends Component {
   drawCard = () => {
     let randCard = this.props.cards[
       Math.floor(Math.random() * this.props.cards.length)
+      //We are calling Math.random(), multiplying the result by length of cards, then passing the value to Math.floor() function to round the value down to the nearest whole number. then passing this number as index number to cards to pull one card.
     ];
     this.setState({ card: randCard });
   };
