@@ -1,4 +1,4 @@
-const URL = "http://localhost:3001/";
+const URL = "https://warm-ridge-20834.herokuapp.com/";
 
 export const createUser = (userData) => {
   return (dispatch) => {
