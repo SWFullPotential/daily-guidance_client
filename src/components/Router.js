@@ -15,33 +15,21 @@ class Router extends Component {
     this.props.checkSession();
   }
   render() {
-    let loggedInRoutes = this.props.state.auth.logged_in ? (
-      <>
+    return (
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/signup" component={Signup} />
+
         <Route exact path="/welcome" component={Welcome} />
 
         <Route exact path="/cards" component={DeckContainer} />
         <Route exact path={`/cards/:id`} component={Card} />
 
         <Route exact path="/daily_draw" component={DailyDrawContainer} />
-      </>
-    ) : (
-      <>
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/signup" component={Signup} />
-        <h3 className="text_center">Please Log In</h3>
-      </>
-    );
-    return (
-      <Switch>
-        <Route exact path="/" component={Home} />
-        {loggedInRoutes}
       </Switch>
     );
   }
 }
 
-const mapStateToProps = (state) => {
-  return { state };
-};
-
-export default connect(mapStateToProps, { checkSession })(Router);
+export default connect(null, { checkSession })(Router);
