@@ -75,7 +75,13 @@ export const createSession = (userData) => {
 
 export const checkSession = () => {
   return (dispatch) => {
-    fetch(URL + "logged_in", { credentials: "same-origin" })
+    fetch(URL + "logged_in", {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    })
       .then((resp) => resp.json())
       .then((data) => {
         console.log(data);
