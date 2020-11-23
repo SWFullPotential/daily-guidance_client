@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
-import Liker from "./Liker";
 class DeckList extends Component {
   constructor() {
     super();
