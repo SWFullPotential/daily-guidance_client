@@ -20,7 +20,6 @@ const RandCard = (props) => {
         <br />
       </>
     );
-
     return (
       <>
         <h1>Your Daily Guidance</h1>
