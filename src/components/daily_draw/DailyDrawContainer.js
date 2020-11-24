@@ -24,7 +24,7 @@ class DailyDrawContainer extends Component {
     return (
       <div className="text_center">
         <h1>Daily Reading</h1>
-        <p>Take a deep breathe, center your mind and draw your card.</p>
+        <p>Take a deep breath, center your mind and draw your card.</p>
 
         <button className="button" onClick={this.drawCard}>
           Draw Card
