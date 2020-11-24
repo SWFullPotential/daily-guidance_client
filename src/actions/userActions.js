@@ -12,7 +12,10 @@ export const createUser = (userData) => {
     };
     fetch(URL + "users", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        mode: "cors",
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(strongParams),
     })
       .then((response) => response.json())
@@ -33,6 +36,7 @@ export const destroySession = () => {
     fetch(URL + "logout", {
       method: "POST",
       headers: {
+        mode: "cors",
         Accept: "application/json",
         "Content-Type": "application/json",
       },
@@ -55,6 +59,7 @@ export const createSession = (userData) => {
     fetch(URL + "login", {
       method: "POST",
       headers: {
+        mode: "cors",
         Accept: "application/json",
         "Content-Type": "application/json",
       },
