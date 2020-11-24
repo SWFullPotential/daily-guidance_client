@@ -78,6 +78,7 @@ export const checkSession = () => {
     fetch(URL + "logged_in", {
       method: "GET",
       headers: {
+        mode: "cors",
         Accept: "application/json",
         "Content-Type": "application/json",
       },
